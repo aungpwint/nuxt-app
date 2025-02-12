@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Sonner } from '@/components/ui/sonner'
 import { ConfigProvider } from 'radix-vue'
 
 const colorMode = useColorMode()
@@ -42,30 +41,13 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 
-const router = useRouter()
-
 const useIdFunction = () => useId()
 </script>
 
 <template>
   <ConfigProvider :use-id="useIdFunction">
-<div>
-<h1>Hello World</h1>
-<Button size="xs" variant="outline">
-              Button xs
-            </Button>
-            <Button size="sm" variant="outline">
-              Button sm
-            </Button>
-            <Button variant="outline">
-              Button Default
-            </Button>
-            <Button size="lg" variant="outline">
-              Button lg
-            </Button>
-            <Button size="icon" variant="outline">
-              <Icon name="i-lucide-chevron-right" />
-            </Button>
-</div>
+    <div>
+      <h1>Welocme</h1>
+    </div>
   </ConfigProvider>
 </template>
