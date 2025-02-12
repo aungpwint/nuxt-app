@@ -1,0 +1,62 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Shadcn Dashboard built with Nuxt",
+  "author": "Aung Pwint <aungpwintofficial@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://shwestudio.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aungpwint/nuxt-app.git"
+  },
+  "keywords": [
+    "dashboard",
+    "admin-dashboard",
+    "vue",
+    "nuxt",
+    "shadcn-vue",
+    "shadcn-nuxt",
+    "shadcn-dashboard",
+    "unocss"
+  ],
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "main": "./nuxt.config.ts",
+  "files": [
+    "app.vue",
+    "components",
+    "components.json",
+    "composables",
+    "constants",
+    "layouts",
+    "lib",
+    "nuxt.config.ts",
+    "pages",
+    "types"
+  ],
+  "dependencies": {
+    "@nuxtjs/color-mode": "3.5.2",
+    "@radix-icons/vue": "^1.0.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "nuxt": "^3.15.0",
+    "radix-vue": "^1.9.13",
+    "tailwind-merge": "^3.0.1",
+    "unocss-preset-animations": "^1.1.1",
+    "unocss-preset-shadcn": "^0.3.2",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "shadcn-nuxt": "^0.10.4",
+    "@unocss/nuxt": "^65.4.3",
+    "unocss": "^65.4.3"
+  }
+}
