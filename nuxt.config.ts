@@ -5,7 +5,7 @@ const currentDir = dirname(fileURLToPath(import.meta.url))
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    modules: ['@unocss/nuxt', 'shadcn-nuxt', '@nuxtjs/color-mode', '@nuxt/eslint'],
+    modules: ['@unocss/nuxt', 'shadcn-nuxt', '@nuxtjs/color-mode', '@nuxt/icon', '@nuxt/eslint'],
 
     components: [
         {
@@ -15,26 +15,33 @@ export default defineNuxtConfig({
         },
     ],
 
-    imports: {
-        dirs: ['./lib'],
+    icon: {
+        provider: 'iconify',
+        serverBundle: false,
     },
-    devtools: { enabled: true },
-
-    css: ['@unocss/reset/tailwind.css'],
 
     colorMode: {
         classSuffix: '',
     },
 
+    imports: {
+        dirs: ['./lib'],
+    },
+
+    css: ['@unocss/reset/tailwind.css'],
+
     features: {
         // For UnoCSS
         inlineStyles: false,
     },
-    compatibilityDate: '2024-11-01',
 
     eslint: {
         config: {
             stylistic: true,
         },
     },
+
+    devtools: { enabled: true },
+
+    compatibilityDate: '2024-11-01',
 })
