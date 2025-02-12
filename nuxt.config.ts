@@ -10,6 +10,7 @@ export default defineNuxtConfig({
         'shadcn-nuxt',
         '@nuxtjs/color-mode',
         '@nuxt/icon',
+        'nuxt-lucide-icons',
         '@pinia/nuxt',
         '@vueuse/nuxt',
         '@nuxt/eslint',
@@ -28,6 +29,10 @@ export default defineNuxtConfig({
         serverBundle: false,
     },
 
+    lucide: {
+        namePrefix: 'Icon',
+    },
+
     colorMode: {
         classSuffix: '',
     },
@@ -36,7 +41,7 @@ export default defineNuxtConfig({
         dirs: ['./lib'],
     },
 
-    css: ['@unocss/reset/tailwind.css'],
+    css: ['@unocss/reset/tailwind.css', '@/assets/styles/global.css'],
 
     features: {
         // For UnoCSS

@@ -4,6 +4,7 @@ import {
     presetIcons,
     presetTypography,
     presetUno,
+    presetMini,
     transformerDirectives,
     transformerVariantGroup,
 } from 'unocss'
@@ -28,6 +29,9 @@ export default defineConfig({
         },
     ],
     theme: {
+        spacing: {
+            4: '1rem', // Ensure that spacing for 4 is defined
+        },
         colors: {
             sidebar: 'hsl(var(--sidebar-background))',
             'sidebar-foreground': 'hsl(var(--sidebar-foreground))',
@@ -58,6 +62,7 @@ export default defineConfig({
         }),
         presetTypography(),
         presetAnimations(),
+        presetMini(),
         presetShadcn(builtinColors.map((c) => ({ color: c }))),
     ],
     transformers: [transformerDirectives(), transformerVariantGroup({ separators: [':'] })],
@@ -74,39 +79,39 @@ export default defineConfig({
     preflights: [
         {
             getCSS: () => `
-        :root {
-          --vis-tooltip-background-color: none !important;
-          --vis-tooltip-border-color: none !important;
-          --vis-tooltip-text-color: none !important;
-          --vis-tooltip-shadow-color: none !important;
-          --vis-tooltip-backdrop-filter: none !important;
-          --vis-tooltip-padding: none !important;
-          
-          --vis-primary-color: var(--primary);
-          --vis-secondary-color: 160 81% 40%;
-          --vis-text-color: var(--muted-foreground);
-          
-          --sidebar-background: 0 0% 98%;
-          --sidebar-foreground: 240 5.3% 26.1%;
-          --sidebar-primary: 240 5.9% 10%;
-          --sidebar-primary-foreground: 0 0% 98%;
-          --sidebar-accent: 240 4.8% 95.9%;
-          --sidebar-accent-foreground: 240 5.9% 10%;
-          --sidebar-border: 220 13% 91%;
-          --sidebar-ring: 217.2 91.2% 59.8%;
-        }
-        
-        .dark {
-          --sidebar-background: 240 5.9% 10%;
-          --sidebar-foreground: 240 4.8% 95.9%;
-          --sidebar-primary: 224.3 76.3% 48%;
-          --sidebar-primary-foreground: 0 0% 100%;
-          --sidebar-accent: 240 3.7% 15.9%;
-          --sidebar-accent-foreground: 240 4.8% 95.9%;
-          --sidebar-border: 240 3.7% 15.9%;
-          --sidebar-ring: 217.2 91.2% 59.8%;
-        }
-      `,
+                :root {
+                --vis-tooltip-background-color: none !important;
+                --vis-tooltip-border-color: none !important;
+                --vis-tooltip-text-color: none !important;
+                --vis-tooltip-shadow-color: none !important;
+                --vis-tooltip-backdrop-filter: none !important;
+                --vis-tooltip-padding: none !important;
+                
+                --vis-primary-color: var(--primary);
+                --vis-secondary-color: 160 81% 40%;
+                --vis-text-color: var(--muted-foreground);
+                
+                --sidebar-background: 0 0% 98%;
+                --sidebar-foreground: 240 5.3% 26.1%;
+                --sidebar-primary: 240 5.9% 10%;
+                --sidebar-primary-foreground: 0 0% 98%;
+                --sidebar-accent: 240 4.8% 95.9%;
+                --sidebar-accent-foreground: 240 5.9% 10%;
+                --sidebar-border: 220 13% 91%;
+                --sidebar-ring: 217.2 91.2% 59.8%;
+                }
+                
+                .dark {
+                --sidebar-background: 240 5.9% 10%;
+                --sidebar-foreground: 240 4.8% 95.9%;
+                --sidebar-primary: 224.3 76.3% 48%;
+                --sidebar-primary-foreground: 0 0% 100%;
+                --sidebar-accent: 240 3.7% 15.9%;
+                --sidebar-accent-foreground: 240 4.8% 95.9%;
+                --sidebar-border: 240 3.7% 15.9%;
+                --sidebar-ring: 217.2 91.2% 59.8%;
+                }
+            `,
         },
     ],
 })
