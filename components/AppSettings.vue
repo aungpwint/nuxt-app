@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Settings } from 'lucide-vue-next'
 const isDesktop = useMediaQuery('(min-width: 768px)')
 
 const isOpen = ref(false)
@@ -8,7 +9,7 @@ const isOpen = ref(false)
     <Sheet v-if="isDesktop" v-model:open="isOpen">
         <SheetTrigger as-child>
             <Button class="fixed top-1/2 z-50 pr-6 -right-3">
-                <Icon name="i-lucide-settings" class="animate-spin-slow" size="18" />
+                <Settings class="animate-spin-slow" size="18" />
             </Button>
         </SheetTrigger>
         <SheetContent>
@@ -25,7 +26,7 @@ const isOpen = ref(false)
     <Drawer v-else v-model:open="isOpen">
         <DrawerTrigger as-child>
             <Button class="fixed top-1/2 z-50 pr-6 -right-3">
-                <Icon name="i-lucide-settings" class="animate-spin-slow" size="18" />
+                <Settings class="animate-spin-slow" size="18" />
             </Button>
         </DrawerTrigger>
         <DrawerContent>

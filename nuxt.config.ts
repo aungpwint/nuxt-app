@@ -1,7 +1,7 @@
-import { fileURLToPath } from 'node:url'
-import { dirname, join } from 'node:path'
+// import { fileURLToPath } from 'node:url'
+// import { dirname, join } from 'node:path'
 
-const currentDir = dirname(fileURLToPath(import.meta.url))
+// const currentDir = dirname(fileURLToPath(import.meta.url))
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -10,27 +10,31 @@ export default defineNuxtConfig({
         'shadcn-nuxt',
         '@nuxtjs/color-mode',
         '@nuxt/icon',
-        'nuxt-lucide-icons',
         '@pinia/nuxt',
         '@vueuse/nuxt',
         '@nuxt/eslint',
     ],
 
-    components: [
-        {
-            path: join(currentDir, './components'),
-            // this is required else Nuxt will autoImport `.ts` file
-            extensions: ['.vue'],
-        },
-    ],
+    // components: [
+    //     {
+    //         path: join(currentDir, './components'),
+    //         // this is required else Nuxt will autoImport `.ts` file
+    //         extensions: ['.vue'],
+    //     },
+    // ],
 
     icon: {
-        provider: 'iconify',
+        provider: 'server', // <-- this
         serverBundle: false,
     },
 
-    lucide: {
-        namePrefix: 'Icon',
+    ssr: false,
+
+    components: {
+        dirs: [
+            '~/components', // Auto-import components in this directory
+            // Add specific directories if needed
+        ],
     },
 
     colorMode: {

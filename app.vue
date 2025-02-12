@@ -62,6 +62,6 @@ const useIdFunction = () => useId()
         </div>
 
         <Toaster />
-        <!-- <Sonner class="pointer-events-auto" /> -->
+        <Sonner class="pointer-events-auto" />
     </ConfigProvider>
 </template>

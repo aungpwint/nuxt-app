@@ -17,5 +17,3 @@ import tasks from '@/components/tasks/data/tasks.json'
         <DataTable :data="tasks.data" :columns="columns" />
     </div>
 </template>
-
-<style scoped></style>

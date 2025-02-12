@@ -12,6 +12,15 @@ import presetAnimations from 'unocss-preset-animations'
 import { builtinColors, presetShadcn } from 'unocss-preset-shadcn'
 
 export default defineConfig({
+    rules: [
+        [
+            /^i-(\w+):(\w+)$/,
+            ([, collection, icon]) => ({
+                'font-family': 'iconify',
+                content: `\${import('@iconify-json/${collection}')?.icons?.[icon]}`,
+            }),
+        ],
+    ],
     variants: [
         {
             // nth-[]:class
