@@ -6,48 +6,48 @@ import {
   presetUno,
   transformerDirectives,
   transformerVariantGroup,
-} from 'unocss'
-import presetAnimations from 'unocss-preset-animations'
-import { builtinColors, presetShadcn } from 'unocss-preset-shadcn'
+} from "unocss";
+import presetAnimations from "unocss-preset-animations";
+import { builtinColors, presetShadcn } from "unocss-preset-shadcn";
 
 export default defineConfig({
   variants: [
     {
       // nth-[]:class
-      name: ':nth-child()',
+      name: ":nth-child()",
       match: (matcher: string) => {
-        const match = matcher.match(/^nth-\[(.+?):/)
-        if (!match)
-          return matcher
+        const match = matcher.match(/^nth-\[(.+?):/);
+        if (!match) return matcher;
         return {
           // slice `hover:` prefix and passed to the next variants and rules
           matcher: matcher.substring(match[0].length),
-          selector: s => `${s}:nth-child(${match[1]})`,
-        }
+          selector: (s) => `${s}:nth-child(${match[1]})`,
+        };
       },
       multiPass: true,
     },
   ],
   theme: {
     colors: {
-      'sidebar': 'hsl(var(--sidebar-background))',
-      'sidebar-foreground': 'hsl(var(--sidebar-foreground))',
-      'sidebar-primary': 'hsl(var(--sidebar-primary))',
-      'sidebar-primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-      'sidebar-accent': 'hsl(var(--sidebar-accent))',
-      'sidebar-accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-      'sidebar-border': 'hsl(var(--sidebar-border))',
-      'sidebar-ring': 'hsl(var(--sidebar-ring))',
+      sidebar: "hsl(var(--sidebar-background))",
+      "sidebar-foreground": "hsl(var(--sidebar-foreground))",
+      "sidebar-primary": "hsl(var(--sidebar-primary))",
+      "sidebar-primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+      "sidebar-accent": "hsl(var(--sidebar-accent))",
+      "sidebar-accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+      "sidebar-border": "hsl(var(--sidebar-border))",
+      "sidebar-ring": "hsl(var(--sidebar-ring))",
     },
     animation: {
       keyframes: {
-        'spin-slow': '{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}',
+        "spin-slow":
+          "{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}",
       },
       counts: {
-        'spin-slow': 'infinite',
+        "spin-slow": "infinite",
       },
       durations: {
-        'spin-slow': '3s',
+        "spin-slow": "3s",
       },
     },
   },
@@ -59,11 +59,11 @@ export default defineConfig({
     }),
     presetTypography(),
     presetAnimations(),
-    presetShadcn(builtinColors.map(c => ({ color: c }))),
+    presetShadcn(builtinColors.map((c) => ({ color: c }))),
   ],
   transformers: [
     transformerDirectives(),
-    transformerVariantGroup({ separators: [':'] }),
+    transformerVariantGroup({ separators: [":"] }),
   ],
   content: {
     pipeline: {
@@ -71,7 +71,7 @@ export default defineConfig({
         // the default
         /\.(vue|svelte|[jt]sx|mdx?|astro|elm|php|phtml|html)($|\?)/,
         // include js/ts files
-        'components/ui/**/*.{js,ts}',
+        "components/ui/**/*.{js,ts}",
       ],
     },
   },
@@ -113,4 +113,4 @@ export default defineConfig({
       `,
     },
   ],
-})
+});

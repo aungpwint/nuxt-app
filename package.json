@@ -28,7 +28,9 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "typecheck": "vue-tsc --noEmit"
   },
   "main": "./nuxt.config.ts",
   "files": [
@@ -63,6 +65,9 @@
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@unocss/nuxt": "^65.4.3",
     "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.5.0",
     "shadcn-nuxt": "^0.10.4",
     "typescript": "^5.7.3",
     "unocss": "^65.4.3"
