@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { themes } from '@/lib/registry/themes'
+import { Monitor, MoonStar, SunDim } from 'lucide-vue-next'
 
 const { theme, radius, setTheme, setRadius } = useCustomize()
 
@@ -114,7 +115,7 @@ const colorMode = useColorMode()
                     :class="{ 'border-primary border-2': colorMode.preference === 'light' }"
                     @click="colorMode.preference = 'light'"
                 >
-                    <Icon name="i-ph-sun-dim-duotone" size="16" />
+                    <SunDim size="16" />
                     <span class="text-xs capitalize">Light</span>
                 </Button>
                 <Button
@@ -123,7 +124,7 @@ const colorMode = useColorMode()
                     :class="{ 'border-primary border-2': colorMode.preference === 'dark' }"
                     @click="colorMode.preference = 'dark'"
                 >
-                    <Icon name="i-ph-moon-stars-duotone" size="16" />
+                    <MoonStar size="16" />
                     <span class="text-xs capitalize">Dark</span>
                 </Button>
                 <Button
@@ -132,7 +133,7 @@ const colorMode = useColorMode()
                     :class="{ 'border-primary border-2': colorMode.preference === 'system' }"
                     @click="colorMode.preference = 'system'"
                 >
-                    <Icon name="i-lucide-monitor" size="16" />
+                    <Monitor size="16" />
                     <span class="text-xs capitalize">System</span>
                 </Button>
             </div>
