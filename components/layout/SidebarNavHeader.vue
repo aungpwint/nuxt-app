@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useSidebar } from '~/components/ui/sidebar'
+import { ChevronsUpDown, Plus } from 'lucide-vue-next'
 
 const props = defineProps<{
     teams: {
@@ -34,7 +35,7 @@ const activeTeam = ref(props.teams[0])
                             </span>
                             <span class="truncate text-xs">{{ activeTeam.plan }}</span>
                         </div>
-                        <Icon name="i-lucide-chevrons-up-down" class="ml-auto" />
+                        <ChevronsUpDown class="ml-auto" />
                     </SidebarMenuButton>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
@@ -62,7 +63,7 @@ const activeTeam = ref(props.teams[0])
                         <div
                             class="size-6 flex items-center justify-center border rounded-md bg-background"
                         >
-                            <Icon name="i-lucide-plus" class="size-4" />
+                            <Plus class="size-4" />
                         </div>
                         <div class="text-muted-foreground font-medium">Add team</div>
                     </DropdownMenuItem>
