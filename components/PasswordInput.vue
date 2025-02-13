@@ -2,6 +2,7 @@
 import type { ComponentFieldBindingObject } from 'vee-validate'
 import type { HTMLAttributes } from 'vue'
 import { cn } from '~/lib/utils'
+import { Eye, EyeOff } from 'lucide-vue-next'
 
 const props = defineProps<{
     class?: HTMLAttributes['class']
@@ -36,8 +37,8 @@ const showPassword = ref(false)
             :disabled="props?.disabled"
             @click="showPassword = !showPassword"
         >
-            <Icon v-if="showPassword" name="i-lucide-eye" class="size-4" aria-hidden="true" />
-            <Icon v-else name="i-lucide-eye-off" class="size-4" aria-hidden="true" />
+            <Eye v-if="showPassword" class="size-4" aria-hidden="true" />
+            <EyeOff v-else class="size-4" aria-hidden="true" />
             <span class="sr-only">
                 {{ showPassword ? 'Show password' : 'Hide password' }}
             </span>
