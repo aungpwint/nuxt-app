@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Monitor, MoonStar } from 'lucide-vue-next'
+
 const color = useColorMode()
 </script>
 
@@ -29,7 +31,7 @@ const color = useColorMode()
                     :class="{ 'bg-accent text-accent-foreground': color.preference === 'dark' }"
                     @click="color.preference = 'dark'"
                 >
-                    <Icon name="i-ph-moon-stars-duotone" size="16" />
+                    <MoonStar size="16" />
                     <span>Dark</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem
@@ -37,7 +39,7 @@ const color = useColorMode()
                     :class="{ 'bg-accent text-accent-foreground': color.preference === 'system' }"
                     @click="color.preference = 'system'"
                 >
-                    <Icon name="i-lucide-monitor" size="16" />
+                    <Monitor size="16" />
                     <span>System</span>
                 </DropdownMenuItem>
             </DropdownMenuGroup>
