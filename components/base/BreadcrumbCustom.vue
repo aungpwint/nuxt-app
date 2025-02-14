@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ChevronRight } from 'lucide-vue-next'
+
 interface Links {
     title: string
     href: string
@@ -29,7 +31,8 @@ withDefaults(
                     </BreadcrumbPage>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator v-if="index < links.length - 1">
-                    <Icon :name="separator" mode="svg" />
+                    <ChevronRight />
+                    <!-- <Icon :name="separator" mode="svg" /> -->
                 </BreadcrumbSeparator>
             </template>
         </BreadcrumbList>
