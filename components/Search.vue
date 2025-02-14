@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { NavGroup, NavMenu } from '~/types/nav'
 import { navMenu } from '@/constants/menus'
+import { Search } from 'lucide-vue-next'
 
 const { metaSymbol } = useShortcuts()
 
@@ -29,7 +30,7 @@ function handleSelectLink(link: string) {
 <template>
     <SidebarMenuButton as-child tooltip="Search">
         <Button variant="outline" size="sm" class="text-xs" @click="openCommand = !openCommand">
-            <Icon name="i-lucide-search" />
+            <Search />
             <span class="font-normal group-data-[collapsible=icon]:hidden"
                 >Search documentation</span
             >
