@@ -1,10 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Paintbrush } from 'lucide-vue-next'
+</script>
 
 <template>
     <Drawer>
         <DrawerTrigger as-child>
             <Button variant="ghost" size="icon">
-                <Icon name="i-lucide-paintbrush" size="16" />
+                <Paintbrush size="16" />
             </Button>
         </DrawerTrigger>
         <DrawerContent>
