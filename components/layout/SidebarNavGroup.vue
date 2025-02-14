@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { NavGroup } from '~/types/nav'
 import { type SidebarMenuButtonVariants, useSidebar } from '~/components/ui/sidebar'
+import { ChevronRight } from 'lucide-vue-next'
 
 withDefaults(
     defineProps<{
@@ -36,8 +37,7 @@ const openCollapsible = ref(false)
                         >
                             New
                         </span>
-                        <Icon
-                            name="i-lucide-chevron-right"
+                        <ChevronRight
                             class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90"
                         />
                     </SidebarMenuButton>
