@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     ],
 
     icon: {
-        provider: 'server', // <-- this
+        provider: 'iconify', // Uses Iconify provider
         serverBundle: false,
     },
 

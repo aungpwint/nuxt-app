@@ -25,10 +25,14 @@ import {
             <CardTitle>Create project</CardTitle>
             <CardDescription>Deploy your new project in one-click.</CardDescription>
         </CardHeader>
-        <CardContent> </CardContent>
+        <CardContent>
+            <Icon name="lucide:home" />
+            <Icon name="lucide:user" />
+            <Icon name="lucide:settings" />
+        </CardContent>
         <CardFooter class="flex justify-between px-6 pb-6">
             <Button variant="outline"> Cancel </Button>
-            <Button>Deploy</Button>
+            <Button> Deploy</Button>
         </CardFooter>
     </Card>
 </template>
