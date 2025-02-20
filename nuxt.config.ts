@@ -16,6 +16,10 @@ export default defineNuxtConfig({
         '@nuxt/eslint',
     ],
 
+    pinia: {
+        storesDirs: ['./stores/**'],
+    },
+
     components: [
         { path: '~/components', priority: 10 }, // Default priority
         { path: '~/components/ui', priority: 20 }, // Higher priority to override
