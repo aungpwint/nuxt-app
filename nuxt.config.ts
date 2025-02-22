@@ -8,13 +8,18 @@ export default defineNuxtConfig({
 
     modules: [
         '@unocss/nuxt',
-        'shadcn-nuxt',
         '@nuxtjs/color-mode',
         '@nuxt/icon',
         '@pinia/nuxt',
         '@vueuse/nuxt',
         '@nuxt/eslint',
+        './modules/shadcn',
     ],
+
+    shadcn: {
+        prefix: '',
+        componentDir: '@/components/ui',
+    },
 
     pinia: {
         storesDirs: ['./stores/**'],
